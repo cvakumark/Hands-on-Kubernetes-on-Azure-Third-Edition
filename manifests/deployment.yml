@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cvakumarkhandsonkubernetesonazurethirdedition 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cvakumarkhandsonkubernetesonazurethirdedition
+  template:
+    metadata:
+      labels:
+        app: cvakumarkhandsonkubernetesonazurethirdedition 
+    spec:
+      containers:
+        - name: cvakumarkhandsonkubernetesonazurethirdedition 
+          image: handsonacr2702.azurecr.io/cvakumarkhandsonkubernetesonazurethirdedition
+          ports:
+          - containerPort: 80
