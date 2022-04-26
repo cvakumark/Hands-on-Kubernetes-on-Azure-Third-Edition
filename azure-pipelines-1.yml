@@ -1,0 +1,11 @@
+stages:
+  - stage: Build
+    displayName: Package manifest files
+    jobs:
+    - job: Package
+      steps:
+      - task: PublishBuildArtifacts@1
+        inputs:
+          ArtifactName: 'manifests'
+          PathtoPublish: ./Chapter03/*
+        
